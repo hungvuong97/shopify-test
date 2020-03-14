@@ -42,3 +42,53 @@ import {
     yield takeLatest("ACTION_SAVE_ACTIVE_TAB", workActiveTab);
   }
   
+
+  function* workDefaultTab(action) {
+    try {
+        console.log(action, 'asgasdsd')
+    } catch (error) {
+      yield put({ type: "LOGIN_ERROR" });
+    } finally {
+      yield put({
+        type: "DONE"
+      });
+    }
+  }
+  
+  export function* watchDefaultTab() {
+    yield takeLatest("ACTION_SAVE_DEFAULT_TAB", workDefaultTab);
+  }
+
+  function* workSaveTab(action) {
+    try {
+        console.log(action, '123')
+    } catch (error) {
+      yield put({ type: "LOGIN_ERROR" });
+    } finally {
+      yield put({
+        type: "DONE"
+      });
+    }
+  }
+  
+  export function* watchSaveTab() {
+    yield takeLatest("ACTION_SAVE_All_TAB", workSaveTab);
+  }
+
+
+
+  function* workSaveProductTab(action) {
+    try {
+        console.log(action, '234')
+    } catch (error) {
+      yield put({ type: "LOGIN_ERROR" });
+    } finally {
+      yield put({
+        type: "DONE"
+      });
+    }
+  }
+  
+  export function* watchSaveProductTab() {
+    yield takeLatest("ACTION_SAVE_CREATE_TAB", workSaveProductTab);
+  }

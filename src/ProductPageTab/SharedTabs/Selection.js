@@ -1,10 +1,13 @@
 import React from 'react';
 import './selection.css'
 export default class Selection extends React.Component {
+    handleSelection =(e) => {
+        this.props.chooseSelection(e.target.value)
+    }
     render() {
         return (
             <div>
-                <select id="mySelect">
+                <select classNae="mySelect" onChange={this.handleSelection}>
                     <option>Custom</option>
                     <option>Shopify reviews</option>
                     <option>YotPo reviews</option>
