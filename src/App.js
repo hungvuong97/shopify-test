@@ -1,13 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Route, Router, Link, Switch } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory';
+import {Provider} from 'react-redux'
 // import SpecificTabs from './SpecificTabs/SpecificTabs'
 import EditShareTab from './ProductPageTab/SharedTabs/EditShareTab'
 import SpecificTabs from './ProductPageTab/SpecificTabs/SpecificTabs'
+import configureStore from "./store";
+const store = configureStore();
 // import Admin from './Admin/Admin'
 const history = createBrowserHistory();
 function App() {
-  return (        
+  return ( 
+    <Provider store={store}>       
     <Router history={history}>
       <div>
         <h2>Apps</h2>
@@ -33,6 +37,7 @@ function App() {
         </Switch>
       </div>
     </Router>
+    </Provider>
   );
 }
 

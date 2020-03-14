@@ -8,6 +8,6 @@ select:not([multiple]) {
     padding-right: 1.5em
 }
 
-#mySelect {
+.mySelect {
     border-radius: 0
 }
