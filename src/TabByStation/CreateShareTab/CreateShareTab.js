@@ -1,14 +1,14 @@
 import React from 'react';
 import Selecttion from '../SpecificTab/Selection';
 import { Editor } from 'react-draft-wysiwyg';
-import { EditorState } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './createsharetab.css'
 export default class CreateShareTab extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            editorState: EditorState.createEmpty(),
+            editorState: {},
+            typeText:''
         }
     }
 
@@ -19,21 +19,25 @@ export default class CreateShareTab extends React.Component {
     };
     type = ['Text', 'Page content', 'App intergration', 'HTML'];
     page = ['select']
+    handleType = (e) => {
+        this.setState({
+
+        })
+    }
     render() {
-        const { editorState } = this.state;
+        const { contentState} = this.state;
         return (
             <div>
                 <p>Title</p>
                 <input type="text" />
                 <br />
                 <p>Type</p>
-                <Selecttion data={this.type}></Selecttion>
+                <Selecttion data={this.type} handleValue={this.handleType}></Selecttion>
                 <Editor
-                    editorState={editorState}
-                    toolbarClassName="toolbarClassName"
-                    wrapperClassName="wrapperClassName"
-                    editorClassName="editorClassName"
-                    onEditorStateChange={this.onEditorStateChange}
+                    initialContentState={contentState}
+                    wrapperClassName="demo-wrapper"
+                    editorClassName="demo-editor"
+                    onContentStateChange={this.onContentStateChange}
                 />
                 <br />
                 <p>Page</p>

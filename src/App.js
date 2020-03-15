@@ -6,6 +6,8 @@ import {Provider} from 'react-redux'
 import EditShareTab from './ProductPageTab/SharedTabs/EditShareTab'
 import SpecificTabs from './ProductPageTab/SpecificTabs/SpecificTabs'
 import CreatProduct from './ProductPageTab/SharedTabs/EditShareTab'
+import ProductDescription from './TabByStation/SpecificTab/SpecificTab'
+import CreateTabStation from './TabByStation/CreateShareTab/CreateShareTab'
 import configureStore from "./store";
 const store = configureStore();
 // import Admin from './Admin/Admin'
@@ -29,6 +31,12 @@ function App() {
           <li>
             <Link to="/createProduct">create ProductPageTab</Link>
           </li>
+          <li>
+            <Link to="/productDescription">product description</Link>
+          </li>
+          <li>
+            <Link to="/createTabStation">create product description</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -40,6 +48,12 @@ function App() {
           </Route>
           <Route path="/createProduct">
             <CreatProduct />
+          </Route>
+          <Route path="/productDescription">
+            <ProductDescription />
+          </Route>
+          <Route path="/createTabStation">
+            <CreateTabStation />
           </Route>
         </Switch>
       </div>

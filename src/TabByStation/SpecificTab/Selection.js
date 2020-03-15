@@ -9,8 +9,12 @@ export default class Selection extends React.Component {
         for (let val of data) {
             option.push(<option>{val}</option>)
         }
-        select.push(<select id="mySelect">{option}</select>)
+        select.push(<select className="mySelect" onChange={this.onChange}>{option}</select>)
         return select
+    }
+
+    onChange = (e) => {
+        this.props.handleValue(e.target.value)
     }
     render() {
         return (

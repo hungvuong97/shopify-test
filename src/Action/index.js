@@ -1,2 +1,3 @@
 import * as productPageTab from './productPageTab';
-export {productPageTab}; 
+import * as tabByStation from './tabByStation'
+export {productPageTab, tabByStation}; 

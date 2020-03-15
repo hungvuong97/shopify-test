@@ -92,16 +92,17 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
                   onChange={this.handleApplice}  />
                 <label>Some products</label><br />
                 <p>Visibility</p>
+
                 <input type="radio"  
                 name="visibility"  
                 value="published"
-                checked={visibility === "someProduct"}
+                checked={visibility === "published"}
                 onChange={this.handleVisibility}  />
                 <label >Published</label><br />
                 <input type="radio"  
                 name="visibility"
                 value="draft"
-                checked={visibility === "someProduct"}
+                checked={visibility === "draft"}
                 onChange={this.handleVisibility}    />
                 <label >Draft</label><br />
 
