@@ -9,6 +9,11 @@ export default function (state = initalState, action){
                ...state,
                data: action.data
            }
+        case "ACTION_SAVE_CREATE_TAB_STATION":
+            return {
+                ...state,
+                data: action.data
+            }
         default: return state
     }
 }

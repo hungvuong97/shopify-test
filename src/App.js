@@ -8,6 +8,7 @@ import SpecificTabs from './ProductPageTab/SpecificTabs/SpecificTabs'
 import CreatProduct from './ProductPageTab/SharedTabs/EditShareTab'
 import ProductDescription from './TabByStation/SpecificTab/SpecificTab'
 import CreateTabStation from './TabByStation/CreateShareTab/CreateShareTab'
+import Layout from './EasyTab/Layout'
 import configureStore from "./store";
 const store = configureStore();
 // import Admin from './Admin/Admin'
@@ -37,6 +38,9 @@ function App() {
           <li>
             <Link to="/createTabStation">create product description</Link>
           </li>
+          <li>
+            <Link to="/layoutSetting">Layout Setting</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -54,6 +58,9 @@ function App() {
           </Route>
           <Route path="/createTabStation">
             <CreateTabStation />
+          </Route>
+          <Route path="/layoutSetting">
+            <Layout />
           </Route>
         </Switch>
       </div>

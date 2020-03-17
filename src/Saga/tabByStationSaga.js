@@ -24,3 +24,11 @@ import {
   export function* watchSaveTabByStation() {
     yield takeLatest("ACTION_SAVE_PRODUCT_DESCRIPTION", workSaveTabByStation);
   }
+
+  function* workSaveCreateTabByStation(action) {
+    console.log(action, '124')
+  }
+
+  export function* watchSaveCreateTabByStation(){
+    yield takeLatest("ACTION_SAVE_CREATE_TAB_STATION", workSaveCreateTabByStation)
+  }
