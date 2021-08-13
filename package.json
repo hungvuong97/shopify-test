@@ -10,7 +10,7 @@
     "koa": "^2.11.0",
     "koa-router": "^8.0.8",
     "mongoose": "^5.9.5",
-    "next": "^9.3.1",
+    "next": "^11.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-draft-wysiwyg": "^1.14.4",
